@@ -1,55 +1,37 @@
----
-title: Remove Background WebGPU
-emoji: 🖼️
-colorFrom: purple
-colorTo: indigo
-sdk: static
-pinned: false
-license: apache-2.0
-models:
-  - Xenova/modnet
-short_description: In-browser image background removal
-thumbnail: https://huggingface.co/spaces/webml-community/remove-background-webgpu/resolve/main/banner.jpg
----
+# Background Remover
 
-# Remove Background WebGPU
+## Overview
 
-A simple React + Vite application for running [MODNet](https://huggingface.co/Xenova/modnet), a tiny portrait background removal model, locally in the browser using Transformers.js and WebGPU-acceleration.
+Background Remover is a tool designed to automatically remove the background from images. It leverages advanced image processing techniques to deliver high-quality results.
 
-## Getting Started
+using the library @huggingface/transformers
 
-Follow the steps below to set up and run the application.
+## Features
 
-### 1. Clone the Repository
+- Automatic background detection and removal
+- Support for multiple image formats (JPEG, PNG, etc.)
+- Batch processing capabilities
+- Easy-to-use command-line interface
 
-Clone the examples repository from GitHub:
+## Installation
 
-```sh
-git clone https://github.com/huggingface/transformers.js-examples.git
-```
+To install the Background Remover, clone the repository and install the required dependencies:
 
-### 2. Navigate to the Project Directory
-
-Change your working directory to the `remove-background-webgpu` folder:
-
-```sh
-cd transformers.js-examples/remove-background-webgpu
-```
-
-### 3. Install Dependencies
-
-Install the necessary dependencies using npm:
-
-```sh
-npm i
-```
-
-### 4. Run the Development Server
-
-Start the development server:
-
-```sh
+```bash
+git clone https://github.com/yourusername/background-remover.git
+cd background-remover
+npm install
 npm run dev
 ```
 
-The application should now be running locally. Open your browser and go to `http://localhost:5173` to see it in action.
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For any questions or feedback, please contact [fenomartin6@gmail.com](mailto:fenomartin6@gmail.com).
