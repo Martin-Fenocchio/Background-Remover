@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://martin-fenocchio.github.io/background-remover-gh-pages/",
+  "homepage": "https://martin-fenocchio.github.io/background-remover/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
