@@ -8,6 +8,7 @@ import ErrorFeedback from "./components/user-feedback/error/error-feedback";
 import LoadingFeedback from "./components/user-feedback/loading/loading-feedback";
 import { processImages, startEngine } from "./engine/remover-engine";
 import "transition-style";
+import WebgpuiNoSopportedFeedback from "./components/user-feedback/webgpui/webgpui-no-sopported-feedback";
 
 export default function App() {
   const [images, setImages] = useState<any[]>([]);
@@ -16,6 +17,7 @@ export default function App() {
   const [isDownloadReady, setIsDownloadReady] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<{ message: string } | null>(null);
+  const [webGPUIsSoported, setwebGPUIsSoported] = useState(true);
 
   const modelRef = useRef<PreTrainedModel | null>(null);
   const processorRef = useRef<AutoProcessor | null>(null);
@@ -26,6 +28,13 @@ export default function App() {
 
   const handleStartEngine = async () => {
     try {
+      const webGPUIsSoported = (navigator as any).gpu != false;
+
+      if (!webGPUIsSoported) {
+        setwebGPUIsSoported(false);
+        return;
+      }
+
       startEngine({ modelRef, processorRef });
     } catch (err: any) {
       setError(err);
@@ -81,6 +90,8 @@ export default function App() {
       "image/*": [".jpeg", ".jpg", ".png"]
     }
   });
+
+  if (!webGPUIsSoported) return <WebgpuiNoSopportedFeedback />;
 
   if (error) return <ErrorFeedback error={error} />;
 

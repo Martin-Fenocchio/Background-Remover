@@ -189,6 +189,62 @@ button i {
   pointer-events: none;
 }
 
+.webgpu-info {
+  background-color: white;
+  color: black;
+  text-align: center;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 16px;
+  padding: 12px;
+  margin-top: 32px;
+}
+
+.webgpu-info .grid {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  gap: 8px;
+}
+
+.webgpu-info h4 {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: bolder;
+  margin-top: 8px;
+}
+
+.webgpu-info > p {
+  text-align: center;
+  margin-bottom: 16px;
+  color: rgb(32, 32, 32);
+  font-weight: light;
+}
+.webgpu-info .grid div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: flex-start;
+}
+.webgpu-info .grid > div {
+  background-color: black;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.flex {
+  flex: 1;
+}
+
+.webgpu-info .grid div img {
+  max-width: 50px;
+}
+
+.webgpu-info .grid div h5 {
+  margin-bottom: 0px;
+}
+
 @media (max-width: 768px) {
   div[role="presentation"] {
     width: 80%;
@@ -203,7 +259,6 @@ button i {
     width: 80%;
     text-wrap: pretty;
     margin-bottom: 8px;
-
     line-height: 24px;
   }
 
@@ -231,5 +286,11 @@ button i {
     button {
       width: 100%;
     }
+  }
+
+  .webgpu-info .grid div {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }

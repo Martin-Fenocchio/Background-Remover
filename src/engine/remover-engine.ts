@@ -17,8 +17,6 @@ export const processImages = async ({
   modelRef: React.MutableRefObject<PreTrainedModel | null>;
   processorRef: React.MutableRefObject<AutoProcessor | null>;
 }) => {
-  console.log("processorRef", processorRef);
-
   const model: any = modelRef.current!;
   const processor: any = processorRef.current!;
 
@@ -68,10 +66,6 @@ export const startEngine = async ({
   modelRef: React.MutableRefObject<PreTrainedModel | null>;
   processorRef: React.MutableRefObject<AutoProcessor | null>;
 }) => {
-  const webGPUIsSoported = (navigator as any).gpu != false;
-
-  if (!webGPUIsSoported) return;
-
   const model_id = "Xenova/modnet";
 
   env!.backends!.onnx!.wasm!.proxy = false;
