@@ -1,7 +1,6 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import { useDropzone } from "react-dropzone";
 import { AutoProcessor, PreTrainedModel } from "@huggingface/transformers";
-
 import DragZone from "./components/drag-zone/drag-zone";
 import ResultsActions from "./components/results/actions/results-actions";
 import ResultsGallery from "./components/results/gallery/results-gallery";
