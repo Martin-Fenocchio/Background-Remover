@@ -15,13 +15,14 @@
 
 body {
   background: rgb(0, 0, 0);
+  overflow-x: hidden;
 }
 
 main {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  padding-top: 120px;
+  padding-top: 50px;
   align-items: center;
 
   h3 {
@@ -50,8 +51,7 @@ main {
 }
 
 .line {
-  position: fixed;
-  top: 32px;
+  margin-bottom: 48px;
   width: 100vw;
   height: 5px;
 
@@ -196,6 +196,7 @@ button i {
   width: 80%;
   max-width: 500px;
   border-radius: 16px;
+  margin-bottom: 100px;
   padding: 12px;
   margin-top: 32px;
 }
@@ -272,11 +273,6 @@ button i {
     margin-top: 48px;
     position: initial;
     margin-bottom: 100px;
-  }
-
-  .line {
-    position: initial;
-    margin-bottom: 48px;
   }
 
   .results-actions {

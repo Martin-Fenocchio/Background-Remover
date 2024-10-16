@@ -28,7 +28,7 @@ export default function App() {
 
   const handleStartEngine = async () => {
     try {
-      const webGPUIsSoported = (navigator as any).gpu != false;
+      const webGPUIsSoported = (navigator as any).gpu != null;
 
       if (!webGPUIsSoported) {
         setwebGPUIsSoported(false);
