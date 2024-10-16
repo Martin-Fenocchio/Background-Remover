@@ -35,7 +35,11 @@ export default function App() {
         return;
       }
 
-      startEngine({ modelRef, processorRef });
+      startEngine({
+        modelRef,
+        processorRef,
+        onNoWebGPU: () => setwebGPUIsSoported(false)
+      });
     } catch (err: any) {
       setError(err);
     } finally {
